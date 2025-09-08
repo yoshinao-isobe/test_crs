@@ -2,6 +2,6 @@ language: c
 sanitizers:
   - address
   - undefined
-main_repo: https://github.com/yourname/aixcc-test-c
+main_repo: https://github.com/yoshinao-isobe/test_crs
 fuzzing_engines:
   - libfuzzer
