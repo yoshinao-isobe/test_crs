@@ -1,0 +1,7 @@
+language: c
+sanitizers:
+  - address
+  - undefined
+main_repo: https://github.com/yourname/aixcc-test-c
+fuzzing_engines:
+  - libfuzzer
