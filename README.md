@@ -1,11 +1,7 @@
-# aixcc-test-c (Buttercup/OSS-Fuzz compatible)
+# aixcc-test-c (Buttercup / OSS-Fuzz compatible)
 
-Small C project with a stack buffer overflow for Buttercup (AIxCC) / OSS-Fuzz.
+- `src/test.c` に stack-buffer-overflow を含む脆弱関数 `Fun1`。
+- `fuzz/fuzz_test.c` は `data[0]=='X'` の条件で `Fun1` を呼び出すハーネス。
+- `oss-fuzz/` 配下に `build.sh`, `Dockerfile`, `project.yaml`。
 
-## Layout
-- `src/test.c`: vulnerable code (`Fun1`)
-- `fuzz/fuzz_test.c`: libFuzzer harness calling `Fun1`
-- `oss-fuzz/`: OSS-Fuzz build files (`build.sh`, `Dockerfile`, `project.yaml`)
-
-## Local (optional): Test with OSS-Fuzz helper
-- Clone `google/oss-fuzz` and run:
+## Local quick check (with OSS-Fuzz helper)
